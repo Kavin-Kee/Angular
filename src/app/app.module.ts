@@ -11,6 +11,9 @@ import { Test5Component } from './test5/test5.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
+import{HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -22,11 +25,15 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     Test5Component,
     HeaderComponent,
     FooterComponent,
-    SidenavComponent
+    SidenavComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

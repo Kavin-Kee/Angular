@@ -5,13 +5,21 @@ import { Test2Component } from './test2/test2.component';
 import { Test4Component } from './test4/test4.component';
 import { Test3Component } from './test3/test3.component';
 import { Test5Component } from './test5/test5.component';
+import { LoginComponent } from './login/login.component';
+import { HeaderComponent } from './header/header.component';
 
 const routes: Routes = [
-  {path:"test1" , component:Test1Component},
-  {path:"test2" , component:Test2Component},
-  {path:"test3" , component:Test3Component},
-  {path:"test4" , component:Test4Component},
-  {path:"test5" , component:Test5Component},
+  { path:'', redirectTo:'login', pathMatch:'full'},
+  {path:'login',component:LoginComponent},
+  {path:'',
+    component:HeaderComponent,
+    children:[
+      {
+        path:'product',
+        component:Test1Component
+      },
+    ]
+  }
 
 ];
 
